@@ -6,11 +6,4 @@
 		<%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
 		<%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
 	</p>
-	
-	<%= form_tag articles_path, :method => :get do %>
-  <p>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :name => nil %>
-  </p>
-<% end %>
 </div>
