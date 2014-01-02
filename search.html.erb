@@ -1,0 +1,8 @@
+	<form class="navbar-form navbar-left" role="search">
+	<%= form_tag pins_path, :method => :get do %>
+	<div class="form-group">
+      <%= text_field_tag :search, params[:search] %>
+    </div>
+      <button type="submit" class="btn btn-default"><%= submit_tag "Search", :name => nil %></button>
+  <% end %>
+  </form>
