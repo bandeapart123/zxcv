@@ -9,12 +9,6 @@
         <span class="icon-bar"></span>
       </button>
       <%= link_to "Learn SAT Vocabulary", root_path, class: "navbar-brand" %>
-      <li><%= form_tag pins_path, :method => :get do %>
-  <p>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :name => nil %>
-  </p>
-<% end %></li>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
