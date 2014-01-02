@@ -17,10 +17,15 @@ gem 'masonry-rails', '~> 0.2.0'
 gem 'will_paginate', '~> 3.0'
 gem 'will_paginate-bootstrap'
 gem 'sunspot_rails'
+gem 'progress_bar'
 
 group :development, :test do
 	gem 'sqlite3'
 end
+
+group :development do
+    gem 'sunspot_solr'
+  end
 
 group :production do
 	gem 'pg'

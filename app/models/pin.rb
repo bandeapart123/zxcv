@@ -5,4 +5,9 @@ class Pin < ActiveRecord::Base
 
 	validates :image, presence: true
 	validates :description, presence: true
+
+	searchable do
+		text :description
+		
+	end
 end
