@@ -14,16 +14,19 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class="nav navbar-nav navbar-right">
-
-        <form class="navbar-form navbar-left" role="search">
-          <%= form_tag pins_path, :method => :get do %>
-          <div class="form-group">
-    <%= text_field_tag :search, params[:search], :class => "form-control" %>
-  </div>
-    <%= submit_tag "Search", :name => nil, :class => "btn btn-primary" %>
-<% end %>
-</form>
-
+        <ul class="nav nav-justified">
+          <li>
+            <form class="navbar-form navbar-left" role="search">
+              <%= form_tag pins_path, :method => :get do %>
+                <div class="form-group">
+                  <%= text_field_tag :search, params[:search], :class => "form-control" %>
+                </div>
+              <%= submit_tag "Search", :name => nil, :class => "btn btn-primary" %>
+            <% end %>
+          </form>
+        </li>
+      </ul>
+      
         <li><%= link_to "Home", root_path %></li>
         <li><%= link_to "About", about_path %></li>
         <% if user_signed_in? %>
