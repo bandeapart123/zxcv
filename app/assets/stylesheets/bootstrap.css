@@ -7682,3 +7682,11 @@ td.visible-print {
 .affix {
   position: fixed;
 }
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.center {
+  text-align: center;
+}
