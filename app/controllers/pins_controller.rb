@@ -5,7 +5,7 @@ class PinsController < ApplicationController
 
   def index
   @search = Pin.search do
-    fulltext params[:search]
+    fulltext params[:pin]
   end
   @pins = @search.results
 end
