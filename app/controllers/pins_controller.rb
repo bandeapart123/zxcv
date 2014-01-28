@@ -4,6 +4,11 @@ class PinsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
+    @search = Pin.search do
+      fulltext params[:search]
+    end
+    @articles = @search.results
+  end
     @pins = Pin.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 6)
   end
 
