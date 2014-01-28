@@ -17,10 +17,7 @@ gem 'masonry-rails', '~> 0.2.0'
 gem 'will_paginate', '~> 3.0'
 gem 'will_paginate-bootstrap'
 gem 'sunspot_rails'
-
-group :development do
-    gem 'sunspot_solr'
-end
+gem 'sunspot_solr'
 
 group :development, :test do
 	gem 'sqlite3'
